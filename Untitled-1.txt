@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstring>
+#include <math.h>
+using namespace std;
+double v,a;
+int h,r,l,L,c,C,I;
+char f[10];
+int main(){
+    cin>>f;
+    if(strcmp(f,"cerc")==0){
+       cin>>r>>h;
+       v=3.14*h*r*r;
+       a=2*3.14*r*h+2*3.14*r*r;
+
+    }
+    if(strcmp(f,"dreptunghi")==0){
+        cin>>L>>l>>h;
+        v=l*L*h;
+        a=2*l*L+2*l*h+2*L*h;
+    }
+    if(strcmp(f,"patrat")==0){
+        cin>>l>>h;
+        v=l*l*h;
+        a=2*l*l+4*l*h;
+    }
+    if(strcmp(f,"triunghi")==0){
+        cin>>c>>C>>h;
+        v=c*C*h/2;
+        I=sqrt(c*c+C*C);
+        a=c*C+(c+C+I)*h;
+    }
+    cout<<2*v<<" "<<a;
+}
